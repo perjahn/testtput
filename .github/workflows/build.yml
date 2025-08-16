@@ -8,6 +8,7 @@ jobs:
     steps:
       - name: Show colors with tput
         run: |
+          export TERM=xterm-256color
           echo "$(tput setaf 1)This is red$(tput sgr0)"
           echo "$(tput setaf 2)This is green$(tput sgr0)"
           echo "$(tput bold)This is bold$(tput sgr0)"
